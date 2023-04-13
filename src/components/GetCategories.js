@@ -14,7 +14,7 @@ export const GetCategories = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/category/${userID}`);
+                const response = await axios.get(`https://modern-shoulder-pads-crow.cyclic.app/category/${userID}`);
                 let Data = response.data.data
 
                 setCategories(Data);

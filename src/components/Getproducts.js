@@ -41,7 +41,7 @@ export const Getproducts = () => {
     const handleProductsByCategorySubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:4000/productsByCategory/${name}/${userID}`,
+            const response = await axios.get(`https://modern-shoulder-pads-crow.cyclic.app/productsByCategory/${name}/${userID}`,
 
             );
             let Data = response.data.data
@@ -59,7 +59,7 @@ export const Getproducts = () => {
     const handleSingleProductSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:4000/singleProduct/${name}/${userID}`,
+            const response = await axios.get(`https://modern-shoulder-pads-crow.cyclic.app/singleProduct/${name}/${userID}`,
 
             );
             let Data = response.data.data
@@ -77,7 +77,7 @@ export const Getproducts = () => {
     const getAllProducts = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:4000/products/${userID}`,
+            const response = await axios.get(`https://modern-shoulder-pads-crow.cyclic.app/products/${userID}`,
 
             );
             let Data = response.data.data

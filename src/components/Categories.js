@@ -30,7 +30,7 @@ export const Categories = () => {
 
         // console.log(name,description)
         try {
-            await axios.post(`http://localhost:4000/category/${userID}`, {
+            await axios.post(`https://modern-shoulder-pads-crow.cyclic.app/category/${userID}`, {
                 name, description,
 
             });
@@ -48,7 +48,7 @@ export const Categories = () => {
 
         // console.log(name)
         try {
-            await axios.delete(`http://localhost:4000/category/${userID}`, {
+            await axios.delete(`https://modern-shoulder-pads-crow.cyclic.app/category/${userID}`, {
                 data: {
                     name: name
                 }

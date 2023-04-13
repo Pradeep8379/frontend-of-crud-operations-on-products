@@ -52,7 +52,7 @@ export const Products = () => {
 
         // console.log(name,description)
         try {
-            await axios.post(`http://localhost:4000/products/${userID}`, {
+            await axios.post(`https://modern-shoulder-pads-crow.cyclic.app/products/${userID}`, {
                 name, categoryName, price, quantity, description,
 
             });
@@ -70,7 +70,7 @@ export const Products = () => {
 
         // console.log(name,description)
         try {
-            await axios.put(`http://localhost:4000/products/${userID}`, {
+            await axios.put(`https://modern-shoulder-pads-crow.cyclic.app/products/${userID}`, {
                 name, category, price, quantity, description,
 
             });
@@ -87,7 +87,7 @@ export const Products = () => {
     const handleDeleteProductSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.delete(`http://localhost:4000/products/${userID}`,
+            const response = await axios.delete(`https://modern-shoulder-pads-crow.cyclic.app/products/${userID}`,
                 {
                     data: {
                         name: name

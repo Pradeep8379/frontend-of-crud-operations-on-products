@@ -26,7 +26,7 @@ export const LoginAndSignup = () => {
         // Send OTP to email and phone number
         // Here's some sample code to generate an OTP
         try {
-            await axios.post("http://localhost:4000/register", {
+            await axios.post("https://modern-shoulder-pads-crow.cyclic.app/register", {
                 name, email, password
             });
             alert("Registration Completed! Now login.");
@@ -40,7 +40,7 @@ export const LoginAndSignup = () => {
         event.preventDefault();
 
         try {
-            let user = await axios.post("http://localhost:4000/login", {
+            let user = await axios.post("https://modern-shoulder-pads-crow.cyclic.app/login", {
                 email, password
             });
             // console.log(user.data.data)
