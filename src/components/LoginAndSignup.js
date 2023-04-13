@@ -48,7 +48,7 @@ export const LoginAndSignup = () => {
             window.localStorage.setItem("token", user.data.data.token);
             window.localStorage.setItem("user", true);
 
-            navigate('/');
+            navigate('/categories');
         } catch (error) {
             console.error(error);
         }

@@ -1,21 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
-import { useGetUserToken } from './../Hooks/useGetUserToken';
-import { useGetUserID } from '../Hooks/useGetUserId'
+
 import { useNavigate } from "react-router-dom";
-let isLoggedIn = window.localStorage.getItem('user')
+
 
 
 
 export const Navbar = () => {
-
-    // const userID = useGetUserID();
-    // const token = useGetUserToken();
+const [loggedIn,setIsLoggedIn]=useState(!!window.localStorage.getItem('user'))
+   
 
     const navigate = useNavigate();
 
     const logout = () => {
         window.localStorage.clear();
+        setIsLoggedIn(false)
         navigate('/loginAndSignup')
     }
 
@@ -30,7 +29,7 @@ export const Navbar = () => {
                         <ul className=" navbar-nav ms-auto mb-2 mb-lg-0 ">
 
 
-                            {!isLoggedIn ? (
+                            {!loggedIn ? (
                                 <>
                                     <li className="nav-item">
                                         <Link type="button" className="btn text-warning" to="/categories">Login </Link>
